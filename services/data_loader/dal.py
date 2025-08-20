@@ -16,7 +16,7 @@ class Dal:
         return result.inserted_id
 
     def read_all(self):
-        return list(self.connection.collection.find(self.query))
+        return list(self.connection.collection.find({}))
 
     def update(self,_id,field_dict):
         result = self.connection.collection.update_one(
